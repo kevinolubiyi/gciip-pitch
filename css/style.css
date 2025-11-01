@@ -67,6 +67,40 @@ p.tagline {
   margin:0.5rem auto 1.5rem;
 }
 
+/* ===== GLOWING FAVICON DISPLAY ===== */
+.favicon-display {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.favicon-glow {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(30, 185, 128, 0.5);
+  animation: glowPulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.favicon-glow:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(30, 185, 128, 0.8);
+}
+
+/* Smooth emerald glow animation */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 6px rgba(30, 185, 128, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(30, 185, 128, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 6px rgba(30, 185, 128, 0.3);
+  }
+}
+
 /* ===== MAIN SECTIONS ===== */
 section {
   max-width:850px;
