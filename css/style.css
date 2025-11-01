@@ -18,12 +18,39 @@ header {
   padding:3rem 1rem 2rem;
 }
 
-header img {
-  width:140px;
-  height:140px;
-  border-radius:50%;
-  border:3px solid var(--green);
-  object-fit:cover;
+/* Header Flex Layout for Photo + Circular Logo */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 1rem;
+}
+
+/* Both profile and circular logo share same circular style */
+.profile-photo,
+.gciip-icon.circular {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--green);
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Subtle hover glow */
+.profile-photo:hover,
+.gciip-icon.circular:hover {
+  box-shadow: 0 0 15px rgba(30, 185, 128, 0.5);
+  transform: scale(1.03);
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 h1 {
