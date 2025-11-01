@@ -12,6 +12,7 @@ body {
   background-attachment:fixed;
 }
 
+/* ===== HEADER ===== */
 header {
   text-align:center;
   padding:3rem 1rem 2rem;
@@ -39,6 +40,7 @@ p.tagline {
   margin:0.5rem auto 1.5rem;
 }
 
+/* ===== MAIN SECTIONS ===== */
 section {
   max-width:850px;
   margin:0 auto;
@@ -47,6 +49,7 @@ section {
   line-height:1.6;
 }
 
+/* ===== BUTTONS ===== */
 a.button {
   display:inline-block;
   background:var(--green);
@@ -64,6 +67,7 @@ a.button:hover {
   transform:translateY(-2px);
 }
 
+/* ===== VIDEO ===== */
 video {
   width:100%;
   max-width:720px;
@@ -76,6 +80,7 @@ video {
   margin-top:1rem;
 }
 
+/* ===== FOOTER ===== */
 footer {
   background:#081424;
   text-align:center;
@@ -92,4 +97,101 @@ footer a {
 
 footer a:hover {
   text-decoration:underline;
+}
+
+/* ==========================================================
+   NEW SECTION: Vision & Expectations for Constructor University
+   ========================================================== */
+
+.vision-section {
+  background: linear-gradient(180deg, #0C1A2E 0%, #0F243C 100%);
+  border-radius: 8px;
+  padding: 2em 2.5em;
+  box-shadow: 0px 0px 10px rgba(30, 185, 128, 0.15);
+  margin: 2em auto;
+  width: 90%;
+  max-width: 1000px;
+  text-align: left;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.vision-section h3 {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  letter-spacing: 0.5px;
+}
+
+.vision-section p {
+  color: #EAEAEA;
+  font-size: 1.05em;
+  line-height: 1.7em;
+  margin-bottom: 1em;
+}
+
+.vision-section ul {
+  list-style-type: none;
+  padding-left: 1em;
+  border-left: 3px solid var(--green);
+  margin: 1.2em 0;
+}
+
+.vision-section ul li {
+  position: relative;
+  padding: 0.5em 0 0.5em 1em;
+  font-size: 1.05em;
+  color: var(--white);
+  line-height: 1.6em;
+}
+
+.vision-section ul li::before {
+  content: "•";
+  color: var(--green);
+  position: absolute;
+  left: -0.6em;
+  top: 0.2em;
+  font-size: 1.3em;
+}
+
+.vision-section strong {
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover glow for elegance */
+.vision-section:hover {
+  box-shadow: 0px 0px 20px rgba(30, 185, 128, 0.25);
+  transition: all 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vision-section {
+    padding: 1.5em;
+    text-align: left;
+  }
+
+  .vision-section h3 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+
+  .vision-section p,
+  .vision-section ul li {
+    font-size: 1em;
+  }
 }
